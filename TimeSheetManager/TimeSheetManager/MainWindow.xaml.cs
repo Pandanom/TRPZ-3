@@ -24,5 +24,15 @@ namespace TimeSheetManager
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            object a = "qwe";
+            object b = 123;
+            object c = DateTime.Now;
+            l1.Content = a;
+            l2.Content = b;
+            l3.Content = c;
+        }
     }
 }

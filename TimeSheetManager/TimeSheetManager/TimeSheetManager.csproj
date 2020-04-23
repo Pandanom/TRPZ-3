@@ -55,6 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\GenericElement.cs" />
+    <Compile Include="Model\Column.cs" />
+    <Compile Include="Model\IColumn.cs" />
+    <Compile Include="Model\IElement.cs" />
+    <Compile Include="Model\Row.cs" />
+    <Compile Include="Model\TableHeader.cs" />
+    <Compile Include="ViewModel\UserInfo.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +100,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

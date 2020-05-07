@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    public interface IElement
+    class Table
     {
-        Type Type { get; }
-        object GetValue();
     }
 }

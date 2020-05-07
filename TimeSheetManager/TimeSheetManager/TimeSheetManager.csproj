@@ -55,13 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\FieldType.cs" />
     <Compile Include="Model\GenericElement.cs" />
     <Compile Include="Model\Column.cs" />
     <Compile Include="Model\IColumn.cs" />
     <Compile Include="Model\IElement.cs" />
     <Compile Include="Model\Row.cs" />
     <Compile Include="Model\TableHeader.cs" />
+    <Compile Include="Model\TableTemplate.cs" />
+    <Compile Include="ViewModel\Startup.cs" />
     <Compile Include="ViewModel\UserInfo.cs" />
+    <Compile Include="ViewModel\UserSettings.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

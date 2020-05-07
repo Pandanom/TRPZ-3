@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimeSheetManager.Model
+namespace TimeSheetManager.ViewModel
 {
-    public interface IColumn
+    class TableBuilder
     {
-        Type Type { get; }
-        int id { get; }
     }
 }

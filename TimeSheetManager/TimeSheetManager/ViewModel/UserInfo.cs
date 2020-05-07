@@ -23,6 +23,7 @@ namespace TimeSheetManager.ViewModel
                 instance = new UserInfo(name, id);
             return instance;
         }
+
         
     }
 }

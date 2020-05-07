@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TimeSheetManager.ViewModel;
 
 namespace TimeSheetManager
 {
@@ -33,6 +34,17 @@ namespace TimeSheetManager
             l1.Content = a;
             l2.Content = b;
             l3.Content = c;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Startup.Start();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var name = UserInfo.getInstance().Name;
+            l1.Content = name;
         }
     }
 }

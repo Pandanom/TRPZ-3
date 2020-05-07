@@ -8,5 +8,11 @@ namespace TimeSheetManager.Model
 {
     class TableHeader
     {
+
+        public string tableName { get => tableName; set => tableName = value; }
+        public long version { get; set; }
+        public DateTime lastMod { get; set; }
+        public IEnumerable<Column> columns { get; set; }
+
     }
 }

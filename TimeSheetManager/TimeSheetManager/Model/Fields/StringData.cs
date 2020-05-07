@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    public class Column<T>
+    class StringData
     {
-        public int number { get; set; }
-        public FieldType type { get; set; }
-        public string title { get; set; }
-
     }
 }

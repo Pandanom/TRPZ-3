@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class DataField
+    public abstract class DataField
     {
+        FieldType type { get; set; }
+        object data { get; set; }
+
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TimeSheetManager.Model;
 using TimeSheetManager.ViewModel;
 
 namespace TimeSheetManager
@@ -24,6 +25,11 @@ namespace TimeSheetManager
         public MainWindow()
         {
             InitializeComponent();
+            var b = TableManager.createTable("qwe", new List<Column>(), Model.TableType.timesheet);
+            DataGridBuilder qwe = new DataGridBuilder(b);
+            qwe.CreateColumns(ref this.phonesGrid);
+            //MessageBox.Show(qwe[0].ToString());
+            //MessageBox.Show(qwe[2].ToString());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimeSheetManager.Model.Fields
+namespace TimeSheetManager.Model
 {
-    class IntData
+    public class IntData : DataField
     {
+        int data { get; set; }
     }
 }

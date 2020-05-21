@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class DateData
+    public class DateData : DataField
     {
+        DateTime data { get; set; }
     }
 }

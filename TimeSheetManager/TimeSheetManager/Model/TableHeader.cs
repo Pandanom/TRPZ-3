@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class TableHeader
+    public class TableHeader
     {
+        public TableHeader(string tableName, IEnumerable<Column> columns)
+        {
+            this.tableName = tableName;
+            this.columns = columns;
+            this.version = 0;
+            this.lastMod = DateTime.Now;
+            tableType = TableType.custom;
+        }
 
-        public string tableName { get => tableName; set => tableName = value; }
+        public string tableName { get; set; }
         public long version { get; set; }
         public DateTime lastMod { get; set; }
         public IEnumerable<Column> columns { get; set; }
+        public TableType tableType { get; set; }
+
 
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class StringData
+    public class StringData : DataField
     {
+        string data { get; set; }
     }
 }

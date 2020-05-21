@@ -55,15 +55,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\TableMemento.cs" />
+    <Compile Include="Model\TableType.cs" />
+    <Compile Include="Model\Fields\DataField.cs" />
+    <Compile Include="Model\Fields\DateData.cs" />
+    <Compile Include="Model\Fields\IntData.cs" />
     <Compile Include="Model\FieldType.cs" />
-    <Compile Include="Model\GenericElement.cs" />
     <Compile Include="Model\Column.cs" />
-    <Compile Include="Model\IColumn.cs" />
-    <Compile Include="Model\IElement.cs" />
     <Compile Include="Model\Row.cs" />
+    <Compile Include="Model\Fields\StringData.cs" />
+    <Compile Include="Model\Table.cs" />
+    <Compile Include="Model\TableData.cs" />
     <Compile Include="Model\TableHeader.cs" />
     <Compile Include="Model\TableTemplate.cs" />
+    <Compile Include="ViewModel\DataGridBuilder.cs" />
+    <Compile Include="ViewModel\TableBuilder\CustomTableBuilder.cs" />
+    <Compile Include="ViewModel\TableBuilder\PlanTableBuilder.cs" />
     <Compile Include="ViewModel\Startup.cs" />
+    <Compile Include="ViewModel\TableBuilder\TableBuilder.cs" />
+    <Compile Include="ViewModel\TableBuilder\TimesheetTableBuilder.cs" />
+    <Compile Include="ViewModel\TableChangesManager.cs" />
+    <Compile Include="ViewModel\TableFacade.cs" />
+    <Compile Include="ViewModel\TableManager.cs" />
+    <Compile Include="ViewModel\TitleManager.cs" />
     <Compile Include="ViewModel\UserInfo.cs" />
     <Compile Include="ViewModel\UserSettings.cs" />
     <Page Include="MainWindow.xaml">

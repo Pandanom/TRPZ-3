@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class Row
+    public class Row
     {
-        Dictionary<IColumn, IElement> values;
+        public Row(int rowNumber)
+        {
+            this.values = new Dictionary<Column, DataField>();
+            this.rowNumber = rowNumber;
+        }
+        int rowNumber { get; set; }
+        Dictionary<Column, DataField> values { get; set; }
     }
 }

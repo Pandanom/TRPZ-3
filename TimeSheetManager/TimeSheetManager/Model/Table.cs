@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class Table
+    public class Table
     {
+        public TableHeader header { get; set; }
+        public TableData tableData { get; set; }
+
+        public TableMemento SaveState()
+        {
+            return new TableMemento(this.tableData);
+        }
+
+
+        public void RestoreState(TableMemento memento)
+        {
+            this.tableData.rows = memento.rows;
+        }
+
+
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class Class1
+    public enum TableType : int
     {
+        timesheet = 1,
+        plan = 2,
+        custom = 0
+
     }
 }

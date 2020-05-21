@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace TimeSheetManager.Model
 {
-    class TableData
+    public class TableData
     {
+        public TableData(TableHeader header)
+        {
+            this.columns = header.columns.ToArray();
+            rows = new Dictionary<int, Row>();
+        }
+
+        public Dictionary<int, Row> rows { get; set; }
+        public Column[] columns { get; set; }
+
+        void AddRow() { }
+        void SetValue() { }
+        void DelRow() { }
     }
 }

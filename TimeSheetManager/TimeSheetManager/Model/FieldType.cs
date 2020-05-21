@@ -15,8 +15,6 @@ namespace TimeSheetManager.Model
         taskName = 5,
         taskDesc = 6,
         plan = 7,
-        startTime = 8,
-        endTime = 9,
         time = 10,
         other = 0
 

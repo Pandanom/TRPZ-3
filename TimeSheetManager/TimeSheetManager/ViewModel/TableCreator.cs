@@ -5,25 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using TimeSheetManager.Model;
+using TimeSheetManager.ViewModel.Data;
 
 namespace TimeSheetManager.ViewModel
 {
-    class TableFacade
+    class TableCreator
     {
-        public TableFacade(TableBuilder tableBuilder, TableChangesManager tableChanges)
+        public TableCreator(TableBuilder tableBuilder, TableChangesManager tableChanges, IRepository<Table> repository)
         {
             this.tableBuilder = tableBuilder;
             this.tableChanges = tableChanges;
+            this.repository = repository;
         }
 
+        public IRepository<Table> repository { get; set; }
         public TableBuilder tableBuilder { get; set; }
         public TableChangesManager tableChanges { get; set; }
         public Table table { get; set; }
         public DataGridBuilder gridBuilder { get; set; }
-        public void initTable()
+        public async Task initTable()
         {
             table = TableManager.createTable(tableBuilder);
             tableChanges.addVersion(table.SaveState());
+            await repository.Insert(table);
 
         }
         public DataGrid Createinterface()
@@ -32,8 +36,18 @@ namespace TimeSheetManager.ViewModel
             DataGrid dataGrid = new DataGrid();
             dataGrid.Margin = new System.Windows.Thickness( 200,50,100,50);
             gridBuilder.CreateColumns(ref dataGrid);
+            dataGrid.SelectedCellsChanged += DataGrid_SelectedCellsChanged;
             return dataGrid;
         }
+
+        private async void DataGrid_SelectedCellsChanged(object sender, SelectedCellsChangedEventArgs e)
+        {
+            var dg = sender as DataGrid;
+            IList<DataGridCellInfo> selectedcells = e.AddedCells;
+            table = await TableManager.DataChanged(table, selectedcells);
+        
+        }
+
 
     }
 }

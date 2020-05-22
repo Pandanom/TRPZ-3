@@ -13,5 +13,12 @@ namespace TimeSheetManager.Model
         {
             this.rows = data.rows;
         }
+
+        public TableData CreateTableData(Column[] columns)
+        {
+            TableData ret = new TableData(columns);
+            ret.rows = rows;
+            return ret;
+        }
     }
 }

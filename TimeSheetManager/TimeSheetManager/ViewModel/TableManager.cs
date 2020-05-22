@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using TimeSheetManager.Model;
 
 namespace TimeSheetManager.ViewModel
@@ -41,6 +42,12 @@ namespace TimeSheetManager.ViewModel
             builder.BuildDataSet();
             builder.initTable();
             return builder.table;
+        }
+
+        public static async Task<Table> DataChanged(Table table, IList<DataGridCellInfo> selectedcells)
+        {
+            //todo
+            return table;
         }
     }
 }

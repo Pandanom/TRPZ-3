@@ -13,7 +13,7 @@ namespace TimeSheetManager.Model
             this.values = new Dictionary<Column, DataField>();
             this.rowNumber = rowNumber;
         }
-        int rowNumber { get; set; }
-        Dictionary<Column, DataField> values { get; set; }
+        public int rowNumber { get; set; }
+        public Dictionary<Column, DataField> values { get; set; }
     }
 }

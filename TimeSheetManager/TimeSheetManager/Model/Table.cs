@@ -8,6 +8,8 @@ namespace TimeSheetManager.Model
 {
     public class Table
     {
+
+
         public TableHeader header { get; set; }
         public TableData tableData { get; set; }
 

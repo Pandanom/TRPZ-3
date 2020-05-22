@@ -24,11 +24,12 @@ namespace TimeSheetManager
     {
         public MainWindow()
         {
+           
             InitializeComponent();
             var b = TableManager.createTable("qwe", new List<Column>(), Model.TableType.timesheet);
             DataGridBuilder qwe = new DataGridBuilder(b);
             qwe.CreateColumns(ref this.phonesGrid);
-            //MessageBox.Show(qwe[0].ToString());
+            //MessageBox.Show(d.GetHashCode().ToString() +"\n" + (d2).GetHashCode().ToString());
             //MessageBox.Show(qwe[2].ToString());
         }
 

@@ -12,6 +12,7 @@ namespace TimeSheetManager.Model
 
         public TableHeader header { get; set; }
         public TableData tableData { get; set; }
+        public int Id { get; set; }
 
         public TableMemento SaveState()
         {

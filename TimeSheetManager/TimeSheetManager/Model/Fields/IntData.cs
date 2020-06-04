@@ -9,5 +9,9 @@ namespace TimeSheetManager.Model
     public class IntData : DataField
     {
         int data { get; set; }
+        public override int GetHashCode()
+        {
+            return data.GetHashCode();
+        }
     }
 }

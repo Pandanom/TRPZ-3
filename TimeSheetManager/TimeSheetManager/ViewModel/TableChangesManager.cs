@@ -26,7 +26,7 @@ namespace TimeSheetManager.ViewModel
             if (TableVers.Count >= maxVers)
                 TableVers.RemoveAt(0);
             CompressedTableData tableData = new CompressedTableData();
-            await tableData.Init(newMem.CreateTableData(columns), fieldFactory).ConfigureAwait(false);
+            var t = tableData.Init(newMem.CreateTableData(columns), fieldFactory).ConfigureAwait(false);
             TableVers.Add(tableData);
         }
 

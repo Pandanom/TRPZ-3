@@ -26,8 +26,8 @@ namespace TimeSheetManager.ViewModel
         public async Task initTable()
         {
             table = TableManager.createTable(tableBuilder);
-            tableChanges.addVersion(table.SaveState());
-            await repository.Insert(table);
+            await tableChanges.addVersion(table.SaveState()).ConfigureAwait(false);
+            await repository.Insert(table).ConfigureAwait(false);
 
         }
         public DataGrid Createinterface()
@@ -48,6 +48,10 @@ namespace TimeSheetManager.ViewModel
         
         }
 
+        public async Task LoadTable()
+        {
+            table = await repository.GetItemByID(UserInfo.getInstance().Id).ConfigureAwait(false);
+        }
 
     }
 }

@@ -35,7 +35,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +49,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="TimesheetModel">
+      <HintPath>..\..\TimesheetModel\TimesheetModel\bin\Debug\TimesheetModel.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
@@ -70,6 +77,7 @@
     <Compile Include="Model\TableTemplate.cs" />
     <Compile Include="ViewModel\DataGridBuilder.cs" />
     <Compile Include="ViewModel\Data\IRepository.cs" />
+    <Compile Include="ViewModel\Data\ServerData.cs" />
     <Compile Include="ViewModel\Data\TableLocalRep.cs" />
     <Compile Include="ViewModel\Data\TableServerRep.cs" />
     <Compile Include="ViewModel\TableBuilder\CustomTableBuilder.cs" />
@@ -116,6 +124,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

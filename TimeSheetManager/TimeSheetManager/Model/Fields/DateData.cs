@@ -9,5 +9,9 @@ namespace TimeSheetManager.Model
     public class DateData : DataField
     {
         DateTime data { get; set; }
+        public override int GetHashCode()
+        {
+            return data.GetHashCode();
+        }
     }
 }
